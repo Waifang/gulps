@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="/app/prd/styles/app.css">
+</head>
+<body>
+	<!--demo1-->
+	<div ng-controller="democon">
+		{{1+2}}
+		<p>{{user[0].user}}---{{user[0].email}}</p>
+		<p ng-bind="user[1].user"></p>
+	</div> 
+
+	<!--demo2遍历及显示和隐藏-->
+	 <!-- <div ng-controller="democon">
+	 		<ul>
+	 			<li ng-repeat="x in user">
+	 				<b>用户名{{$index+1}}：{{x.user}}</b>--
+	 				<span>邮箱{{$index+1}}：{{x.email}}</span>
+	 			</li>
+	 		</ul>
+	 		<div ng-show="isShow">是否显示</div>
+	 		<div ng-hide="isShow">是否隐藏</div>
+	 		<div ng-if="isShow">是否显示与隐藏</div>
+	 	</div>  -->
+
+	
+	<!--demo3点击-->
+	<!-- <div ng-controller="democon">
+		<input type="text" ng-model="count">
+		<input type="button" ng-click="add()" value="+">
+	</div> -->
+
+	<!--demo4-->
+	 <!-- <div ng-controller="democon">
+	 		<label>
+	 			请输入您感兴趣的内容：
+	 			<input type="text" ng-model="item" ng-keyup="adds($event)">
+	 		</label>
+	 		<ul>
+	 			<li ng-repeat="x in arr track by x">
+	 				{{x}}
+	 			</li>
+	 		</ul>
+	 	</div>  -->
+
+
+	 	<!--demo5-->
+	 	<!-- <div ng-controller="democon">
+	 		<p>{{price | currency:"￥"}}</p>
+	 		<ul>
+	 			<li ng-repeat="book in books | limitTo:limit | orderBy:'-updated'">
+	 				<p style="color:#f00;font-size:18px">书名：{{book.name | uppercase}}</p>
+	 				<p>更新时间：{{book.updated | date:"yyyy年MM月dd日 HH:mm:ss"}}</p>
+	 			</li>
+	 		</ul>
+	 	</div> -->
+	<script src="/app/libs/angular.min.js"></script>
+	<script src="/app/prd/scripts/app.js"></script>
+</body>
+</html>
